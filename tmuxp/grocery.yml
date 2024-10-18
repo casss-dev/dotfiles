@@ -1,0 +1,14 @@
+session_name: grocery
+start_directory: ~/Projects/grocery_app/
+windows:
+  - window_name: mobile
+    start_directory: ~/Projects/grocery_app/Grocery/
+    panes:
+      - "open . -a Xcode"
+  - window_name: api
+    start_directory: ~/Projects/grocery_app/grocery-api/
+    layout: even-horizontal
+    panes:
+      - docker compose up db
+      - "open . -a Intellij\\ IDEA\\ CE"
+

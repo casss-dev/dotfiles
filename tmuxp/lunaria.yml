@@ -1,0 +1,26 @@
+session_name: lunaria
+start_directory: ~/Projects/lunaria_apps/
+windows:
+  - window_name: api_code
+    start_directory: ~/Projects/lunaria_apps/lunaria_api/
+    panes:
+      - pv
+  - window_name: api_server
+    start_directory: ~/Projects/lunaria_apps/lunaria_api/
+    panes:
+      - make dev
+  - window_name: mobile_app
+    start_directory: ~/Projects/lunaria_apps/Lunaria/
+    layout: main-vertical
+    options:
+      main-pane-width: 67%
+    panes:
+      - ""
+      - ""
+  - window_name: chase_scraper
+    start_directory: ~/Projects/lunaria_apps/chase_scraper/
+    panes:
+      - ""
+  - window_name: pi
+    panes:
+      - ""

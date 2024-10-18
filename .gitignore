@@ -1,0 +1,3 @@
+**/private*
+tmux/plugins/*
+!tmux/plugins/tpm

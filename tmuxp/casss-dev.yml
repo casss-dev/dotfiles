@@ -1,0 +1,15 @@
+session_name: casss-dev
+start_directory: ~/Projects/portfolio/casss-dev/
+windows:
+  - window_name: code
+    layout: main-vertical
+    options:
+      main-pane-width: 67%
+    panes:
+      - nvim .
+      - make dev
+  - window_name: server
+    layout: even-horizontal
+    panes:
+      - make run
+      - make tailwind

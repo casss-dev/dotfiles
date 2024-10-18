@@ -1,0 +1,17 @@
+session_name: little_leaf
+start_directory: ~/Projects/little_leaf/little-leaf-v4 
+windows:
+  - window_name: v4
+    layout: main-vertical
+    start_directory: ~/Projects/little_leaf/little-leaf-v4
+    panes:
+      - nvim .
+  - window_name: git
+    panes:
+      - lg
+      - ogodot && exit
+  - window_name: v3
+    layout: main-vertical
+    start_directory: ~/Projects/little_leaf/little-leaf-v3
+    panes:
+      - ""
