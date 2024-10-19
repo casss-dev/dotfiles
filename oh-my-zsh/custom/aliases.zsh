@@ -1,3 +1,5 @@
+# MARK: General
+
 alias v="find . -type f -not -path './.git/*' | fzf-tmux -p --reverse | xargs nvim"
 alias t="tmux new -As 0_main"
 alias c="clear"
@@ -15,16 +17,19 @@ alias litart="cd ~/Projects/little_leaf/little-leaf-v3/Assets/Art"
 alias fzfo='open "$(fzf)"'
 alias lg="lazygit"
 
-# Apps
+# MARK: Apps
+
 alias sim="open -a Simulator.app"
 alias xc="open . -a Xcode"
 function quit() {
   osascript -e "tell application \"$1\" to quit" 2> /dev/null
 }
+
 # Checks if an app is running
 function isrunning() {
   ps aux | grep -v grep | awk '{ print $11 }' | grep -c -i "$1" &> /dev/null
 }
+
 # Opens godot if not running, otherwise brings it to the foreground
 function ogodot () {
     if $(isrunning 'Godot'); then
@@ -34,23 +39,26 @@ function ogodot () {
     fi
 }
 
-# Projects
+# MARK: Projects
 alias casdev="tmuxp load -y casss-dev"
 alias lunaria="tmuxp load -y lunaria"
 alias grocery="tmuxp load -y grocery"
 alias little="tmuxp load -y little_leaf"
 
-# SPM
+# MARK: SPM
+
 alias s="swift"
 alias spres="swift package resolve"
 alias sprhh="swift package resolve"
+
+# MARK: Poetry
 
 alias poetbump="~/Projects/cli/version_bumpers/poetry_bumper.py"
 alias pv="poetry run nvim"
 
 alias pi="ssh pi@raspberrypi.local"
 
-_bl() {
+function bl () {
     if [[ `blueutil -p` == '0' ]]; then
         blueutil -p 1
         echo "Bluetooth ON"
@@ -59,25 +67,22 @@ _bl() {
         echo "Bluetooth OFF"
     fi
 }
-alias bl=_bl
-_rms() {
+
+alias listbl="system_profiler SPBluetoothDataType"
+
+function rms () {
     mv -nv "$1" "$HOME/.Trash/."
 }
-alias rms=_rms
+
 alias uploadmint="mintscrape -v transactions -u"
-_mksc() {
+
+function mksc () {
     echo '#!/usr/bin/env python' >> "$1.py"
     chmod +x "$1.py"
 }
-alias mksc=_mksc
 
 # DOCKER
 # alias dockerrmall="docker rm `docker container ls -aq`"
 # alias dockerrmi="docker rmi `docker images -f 'dangling=true' -q`"
-#
-alias xcbs="cd $HOME/Library/Caches/xcode-build-server"
 
-_diffile() {
-  git diff 13bc8f39feb6e8c2999fee361491fa25996dca0b head "$1"
-}
-alias diffile=_diffile
+alias xcbs="cd $HOME/Library/Caches/xcode-build-server"
