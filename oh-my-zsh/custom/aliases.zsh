@@ -1,10 +1,10 @@
 # MARK: General
 
-alias v="find . -type f -not -path './.git/*' | fzf-tmux -p --reverse | xargs nvim"
+alias v="find . -type f -not -path './.git/*' -not -path './.build/*' | fzf-tmux -p --reverse | xargs nvim"
 alias t="tmux new -As 0_main"
 alias c="clear"
 alias nvimconf="cd ~/.config/nvim/ && nvim ."
-alias aliases="nvim $ZSH_CUSTOM/aliases.zsh"
+alias aliases="cd $ZSH_CUSTOM && nvim '$ZSH_CUSTOM'aliases.zsh"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
 alias pp="cd \`find ~/Projects -maxdepth 1 | fzf\`"
@@ -16,6 +16,7 @@ alias lit="cd ~/Projects/little_leaf/little-leaf-v3"
 alias litart="cd ~/Projects/little_leaf/little-leaf-v3/Assets/Art"
 alias fzfo='open "$(fzf)"'
 alias lg="lazygit"
+alias gundo="git reset --soft HEAD~1"
 
 # MARK: Apps
 
@@ -28,6 +29,25 @@ function quit() {
 # Checks if an app is running
 function isrunning() {
   ps aux | grep -v grep | awk '{ print $11 }' | grep -c -i "$1" &> /dev/null
+}
+
+function arcicon() {
+    icons=("original" "candy" "hologram" "neon" "flutedGlass" "schoolbook" "colorful")
+    which_icon=$(printf '%s\n' "${icons[@]}" | fzf)
+    defaults write company.thebrowser.Browser currentAppIconName "$which_icon"
+    echo "Set Arc app icon to '$which_icon'"
+}
+
+# MARK: Godot
+
+alias godot='/Applications/Godot.app/Contents/MacOS/Godot'
+
+function gut () {
+    # -d: run godot in debug mode
+    # -s: godot should run script
+    # --path: godot should treat directory as root of the project
+    godot -d -s --path "$PWD" addons/gut/gut_cmdln.gd $@
+    echo $?
 }
 
 # Opens godot if not running, otherwise brings it to the foreground
@@ -79,6 +99,12 @@ alias uploadmint="mintscrape -v transactions -u"
 function mksc () {
     echo '#!/usr/bin/env python' >> "$1.py"
     chmod +x "$1.py"
+}
+
+function tnew () {
+    name=$(basename `pwd`)
+    tmux new -s "$name" -d
+    tmux switch-client -t "$name"
 }
 
 # DOCKER
