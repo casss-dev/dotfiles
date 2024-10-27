@@ -4,6 +4,7 @@ alias v="find . -type f -not -path './.git/*' -not -path './.build/*' | fzf-tmux
 alias t="tmux new -As 0_main"
 alias c="clear"
 alias nvimconf="cd ~/.config/nvim/ && nvim ."
+alias tmuxconf="nvim ~/.tmux.conf"
 alias aliases="cd $ZSH_CUSTOM && nvim '$ZSH_CUSTOM'aliases.zsh"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
