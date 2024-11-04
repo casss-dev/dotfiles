@@ -145,3 +145,6 @@ source_if_exists /usr/local/opt/chruby/share/chruby/auto.sh
 
 # tmuxp
 export DISABLE_AUTO_TITLE='true'
+
+export LC_ALL=en_IN.UTF-8
+export LANG=en_IN.UTF-8
