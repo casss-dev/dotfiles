@@ -11,3 +11,9 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "iterm/themes/rose-pine"]
+	path = iterm/themes/rose-pine
+	url = ssh://git@github.com/rose-pine/iterm
+[submodule "iterm/themes/catppuccin"]
+	path = iterm/themes/catppuccin
+	url = ssh://git@github.com/catppuccin/iterm
