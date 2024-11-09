@@ -52,7 +52,7 @@ function gut () {
 }
 
 # Opens godot if not running, otherwise brings it to the foreground
-function ogodot () {
+function ogo () {
     if $(isrunning 'Godot'); then
         osascript -e "tell application \"Godot\" to activate"
     else

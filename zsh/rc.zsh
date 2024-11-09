@@ -150,6 +150,6 @@ export LC_ALL=en_IN.UTF-8
 export LANG=en_IN.UTF-8
 
 # Lazygit
-MY_LG_CONFIG="$HOME/Library/Application Support/lazygit/config.yml"
-MY_LG_THEME="$DOTFILES/lazygit/themes/catppuccin/themes-mergable/latte/rosewater.yml"
+local MY_LG_CONFIG="$HOME/Library/Application Support/lazygit/config.yml"
+local MY_LG_THEME="$DOTFILES/lazygit/themes/catppuccin/themes-mergable/macchiato/rosewater.yml"
 export LG_CONFIG_FILE="$MY_LG_CONFIG,$MY_LG_THEME"
