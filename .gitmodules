@@ -17,3 +17,6 @@
 [submodule "iterm/themes/catppuccin"]
 	path = iterm/themes/catppuccin
 	url = ssh://git@github.com/catppuccin/iterm
+[submodule "lazygit/themes/catppuccin"]
+	path = lazygit/themes/catppuccin
+	url = ssh://git@github.com/catppuccin/lazygit
