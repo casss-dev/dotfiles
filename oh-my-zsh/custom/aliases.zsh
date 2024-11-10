@@ -65,6 +65,7 @@ alias casdev="tmuxp load -y casss-dev"
 alias lunaria="tmuxp load -y lunaria"
 alias grocery="tmuxp load -y grocery"
 alias little="tmuxp load -y little_leaf"
+alias dot="cd $DOTFILES"
 
 # MARK: SPM
 
