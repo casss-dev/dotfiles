@@ -9,7 +9,7 @@ windows:
   - window_name: git
     panes:
       - lg
-      - ogodot && exit
+      - ogo && exit
   - window_name: v3
     layout: main-vertical
     start_directory: ~/Projects/little_leaf/little-leaf-v3
