@@ -18,7 +18,9 @@ alias litart="cd ~/Projects/little_leaf/little-leaf-v3/Assets/Art"
 alias fzfo='open "$(fzf)"'
 alias lg="lazygit"
 alias gundo="git reset --soft HEAD~1"
-alias cdobs="~/Library/Mobile Documents/iCloud~md~obsidian/Documents"
+
+export OBS_DIR="~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/cdev"
+alias obs="cd $OBS_DIR && nvim ."
 
 # MARK: Apps
 
