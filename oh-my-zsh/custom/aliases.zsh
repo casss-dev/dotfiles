@@ -4,7 +4,7 @@ alias v="find . -type f -not -path './.git/*' -not -path './.build/*' | fzf-tmux
 alias t="tmux new -As 0_main"
 alias c="clear"
 alias nvimconf="cd ~/.config/nvim/ && nvim ."
-alias tmuxconf="nvim ~/.tmux.conf"
+alias tmuxconf="cd $DOTFILES && nvim ./tmux/tmux.conf"
 alias aliases="cd $ZSH_CUSTOM && nvim '$ZSH_CUSTOM'aliases.zsh"
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"
@@ -18,6 +18,7 @@ alias litart="cd ~/Projects/little_leaf/little-leaf-v3/Assets/Art"
 alias fzfo='open "$(fzf)"'
 alias lg="lazygit"
 alias gundo="git reset --soft HEAD~1"
+alias cdobs="~/Library/Mobile Documents/iCloud~md~obsidian/Documents"
 
 # MARK: Apps
 
@@ -47,7 +48,7 @@ function gut () {
     # -d: run godot in debug mode
     # -s: godot should run script
     # --path: godot should treat directory as root of the project
-    godot -d -s --path "$PWD" addons/gut/gut_cmdln.gd $@
+    godot --headless -d -s --path "$PWD" addons/gut/gut_cmdln.gd $@
     echo $?
 }
 
