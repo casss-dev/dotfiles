@@ -50,7 +50,7 @@ function gut () {
     # -d: run godot in debug mode
     # -s: godot should run script
     # --path: godot should treat directory as root of the project
-    godot --headless -d -s --path "$PWD" addons/gut/gut_cmdln.gd $@
+    testing=TRUE godot --headless -d -s --path "$PWD" addons/gut/gut_cmdln.gd $@
     echo $?
 }
 
@@ -73,8 +73,7 @@ alias dot="cd $DOTFILES"
 # MARK: SPM
 
 alias s="swift"
-alias spres="swift package resolve"
-alias sprhh="swift package resolve"
+alias spm="swift package"
 
 # MARK: Poetry
 
