@@ -10,6 +10,10 @@ windows:
     panes:
       - lg
       - ogo && exit
+  - window_name: obsidian
+    layout: main-vertical
+    panes:
+      - "obs"
   - window_name: v3
     layout: main-vertical
     start_directory: ~/Projects/little_leaf/little-leaf-v3
