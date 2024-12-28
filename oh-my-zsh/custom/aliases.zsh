@@ -59,6 +59,8 @@ function ogo () {
     if $(isrunning 'Godot'); then
         osascript -e "tell application \"Godot\" to activate"
     else
+        # Sync dialogs
+        # dpar -f
         open ./project.godot
     fi
 }
@@ -81,6 +83,7 @@ alias poetbump="~/Projects/cli/version_bumpers/poetry_bumper.py"
 alias pv="poetry run nvim"
 
 alias pi="ssh pi@raspberrypi.local"
+alias pir="ssh pi@100.98.53.94"
 
 function bl () {
     if [[ `blueutil -p` == '0' ]]; then
@@ -116,3 +119,13 @@ function tnew () {
 # alias dockerrmi="docker rmi `docker images -f 'dangling=true' -q`"
 
 alias xcbs="cd $HOME/Library/Caches/xcode-build-server"
+
+# Ghostty
+alias ghostty="/Applications/Ghostty.app/Contents/MacOS/ghostty"
+alias ghostconf="cd ~/Library/Application\ Support/com.mitchellh.ghostty"
+
+function fzff () {
+    find . -iname $1 | fzf
+}
+
+alias aseprite="open \`fzff '*.aseprite'\`"

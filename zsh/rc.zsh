@@ -130,7 +130,7 @@ export PATH="$PATH:$HOME/.local/bin"
 # Thu Nov 30 07:54:18 CST 2023
 export PATH="$PATH:/opt/homebrew/opt/postgresql@15/bin"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source_if_exists ~/.fzf.zsh
 
 eval "$(starship init zsh)"
 
@@ -151,5 +151,5 @@ export LANG=en_IN.UTF-8
 
 # Lazygit
 local MY_LG_CONFIG="$HOME/Library/Application Support/lazygit/config.yml"
-local MY_LG_THEME="$DOTFILES/lazygit/themes/catppuccin/themes-mergable/macchiato/rosewater.yml"
+local MY_LG_THEME="$DOTFILES/lazygit/themes/catppuccin/themes-mergable/mocha/rosewater.yml"
 export LG_CONFIG_FILE="$MY_LG_CONFIG,$MY_LG_THEME"

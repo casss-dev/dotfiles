@@ -10,10 +10,11 @@ windows:
     panes:
       - lg
       - ogo && exit
-  - window_name: obsidian
+  - window_name: obsidian+assist
     layout: main-vertical
     panes:
       - "obs"
+      - "echo 'use assistant here'"
   - window_name: v3
     layout: main-vertical
     start_directory: ~/Projects/little_leaf/little-leaf-v3
